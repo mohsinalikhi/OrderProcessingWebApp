@@ -1,0 +1,21 @@
+﻿@model OrderProcessingWebApp.Models.OrderModel
+
+@{
+    ViewData["Title"] = "Place Order";
+}
+
+<h2>Order Entry</h2>
+
+<form method="post" asp-action="ProcessOrder">
+    <label>Order Amount:</label>
+    <input type="number" asp-for="OrderAmount" required class="form-control" />
+
+    <label>Customer Type:</label>
+    <select asp-for="CustomerType" class="form-control">
+        <option value="New">New</option>
+        <option value="Loyal">Loyal</option>
+    </select>
+
+    <button type="submit" class="btn btn-primary mt-2">Submit Order</button>
+</form>
+
