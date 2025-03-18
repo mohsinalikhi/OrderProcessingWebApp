@@ -3,10 +3,13 @@ name: .NET Core CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
+      - mainbranch
+      - FeatureAddlinkinMainMenu
   pull_request:
     branches:
-      - main
+      - master
+      - mainbranch
 
 jobs:
   build-and-test:
